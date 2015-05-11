@@ -1,0 +1,391 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+
+html, body {
+    font-family: 'Roboto', sans-serif;
+    height: 100%;
+    width: 100%;
+    padding:0;
+    margin:0;
+    background-color: white;
+    perspective: 900px;
+    overflow: hidden;
+}
+.hidden { opacity:0; }
+controls {
+  font-size: 12px;opacity:0.3;
+}
+controls:hover{ opacity:1;}
+symbol {
+  font-size: 120px;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  opacity:0;
+}
+comment {
+  background-color: #222;
+}
+
+#logo {
+  #circle1,#circle2,#circle3,#circle4,#circle5,#circle6,#circle7 { transition: all .4s ease;fill:#FFF;opacity:0; }
+  #circle1 { transform:scale(0.3) translate(300px,360px);transition-delay: 0.4s;fill: #3090FF;opacity:1;}
+  #circle2 { transform:scale(0.3) translate(200px,460px);transition-delay: 0.6s; }
+  #circle3 { transform:scale(0.3) translate(200px,460px);transition-delay: 0.8s; }
+  #circle4 { transform:scale(0.3) translate(200px,460px);transition-delay: 1.0s; }
+  #circle5 { transform:scale(0.3) translate(200px,460px);transition-delay: 1.4s; }
+  #circle6 { transform:scale(0.3) translate(200px,460px);transition-delay: 1.6s; }
+  #circle7 { transform:scale(0.3) translate(200px,460px);transition-delay: 1.8s; }
+
+}
+
+.s1 {
+  #logo: show();
+}
+.s2 {
+  #logo {
+    #circle1,#circle2,#circle3,#circle4,#circle5,#circle6,#circle7 { transform: scale(1);fill:white;opacity:1;}
+    #circle1,#circle3,#circle6,#circle7 { fill: #3090FF;}
+  }
+}
+#twinfield {  color: #3090FF; }
+#twinfield: move(320,0);
+#title {  font-size:26px;transition-delay: 1s; }
+#title: move(550,100);
+
+.s3 {
+  #logo: scale(0.5,0.5) move(-200,0);
+  #twinfield: show move(120,0);
+  #title:show move(50,100);
+}
+
+#how: move(0,-500);
+
+.s4 {
+  #title: hide move(+0,+500) delay(0);
+  #how: show move(0,0);
+  #logo: move(-200) hide;
+  #twinfield: move(500) hide;
+}
+#m1,#v1,#v2,#m2 { font-size:140px;}
+#m1: move(-340);
+#v1: move(-160,-200);
+#v2: move(190,-200);
+#m2: move(350);
+.s5 {
+  #how: move(0,+400) hide();
+  #m1: move(-140) show;
+  #v1: move(-40,0) show;
+  #v2: move(50,0) show;
+  #m2: move(150,0) show;
+}
+#odel1: move(-215,-245);
+#odel1,#iew1,#odel2,#iew2 { color: #999; transform-origin: 50% 100%; }
+#iew1: move(-100,-110);
+#iew2: move(-100,10);
+#odel2: move(220,10);
+
+.s6 {
+  #m1: up(250);
+  #odel1: show right(250) delay(0.8);
+  #v1: up(115) left(100) delay(1.2);
+  #iew1: show right(100) delay(1.4);
+  #v2: left(190) delay(1.8);
+  #iew2: show right(100) delay(2);
+  #odel2: show right(100) delay(2.2);
+}
+@mixin image {
+  box-shadow: 0 0 20px #444;padding: 5px;line-height: 0;
+}
+
+#why { @include image; }
+#why: move(500);
+
+.s7 {
+  #m1: rotate(0,120) delay(0);
+  #odel1: rotateX(-100) delay(0.2);
+  #v1: rotate(0,120) delay(0.4);
+  #iew1: rotateX(-100) delay(0.6);
+  #v2: rotate(0,120) delay(0.8);
+  #iew2: rotateX(-100) delay(1);
+  #m2: rotate(0,120) delay(1.2);
+  #odel2: rotateX(-100) delay(1.4);
+
+  #why:show left(500) delay(1.6);
+}
+#shop { @include image;}
+#shop: move(0,-500);
+#wesell: move(-300,-170);
+#capabilities: move(-300,200);
+#wesell, #capabilities { font-size: 60px;text-shadow: 0 0 10px #eee; }
+.s8 {
+  #why: hide down(500) delay(0);
+  #shop: down(500) show;
+  #wesell:show right(300) delay(0.5);
+  #capabilities:show right(300) delay(0.7);
+}
+#waste { @include image;transform-origin: 50% 100%;}
+#waste: rotate(0,180);
+#dontspend, #cantsell { font-size: 60px;text-shadow: 0 0 40px #fff,0 0 5px #fff;background-color: rgba(100,100,100,0.5);padding:20px; }
+#dontspend: move(0,-500);
+#cantsell: move(0,300);
+
+.s9 {
+  #wesell: hide right(300) delay(0);
+  #capabilities: hide right(300) delay(0.2);
+  #shop: hide rotate(0,-180) delay(0.5);
+  #waste: show rotate(0,-180) delay(0.5);
+  #dontspend: show down(300) delay(0.8);
+  #cantsell: show up(300) delay(0.8);
+}
+#outsource { @include image;}
+#outsource: move(0,-500);
+
+.s10 {
+  #waste: hide rotate(-80);
+  #dontspend: hide down(800);
+  #cantsell: hide down(300) delay(0.1);
+  #outsource: show down(400) delay(0.3);
+  #outsourceq: show down(130) delay(1.2);
+}
+#question: move(0,-400);
+#quality: move(0,-700);
+#quality { background-color: rgba(100,100,100,0.5);padding: 20px 150px;text-shadow: 0 0 10px white;}
+.prettyprint { font-size: 20px; padding: 20px;box-shadow: 0 0 20px #222;}
+#badcss: move(0,-800);
+.s11 {
+  #outsource: hide down(400);
+  #outsourceq: hide down(400);
+  #question: show down(400);
+  #quality: show down(400) delay(0.5);
+  #badcss: show down(800)  delay(1.3);
+}
+#angLogo,#backLogo, #reactLogo {
+  background-color: rgba(190,190,190,0.6);line-height: 0;padding:30px;
+}
+#angLogo: scale(0.4,0.4) move(500,-185);
+#backLogo: scale(0.6,0.6) move(-500,-185);
+#reactLogo: scale(0.3,0.3) move(0,450);
+.s12 {
+  #badcss: hide down(400) delay(0);
+  #quality: hide down(400) delay(0.2);
+  #backLogo: show right(300);
+  #angLogo: show left(300) delay(1);
+  #reactLogo: show up(300) delay(1.2);
+}
+#mobileDevices: scale(0.7,0.7) move(0,-400) rotateX(60);
+.s13 {
+  #backLogo: move(0,300) delay(0) hide;
+  #angLogo: move(0,300) delay(0) hide;
+  #reactLogo: move(0,300) delay(0) hide;
+  #mobileDevices: show down(400) rotateX(-60);
+}
+.s14 {
+  #mobileDevices: hide down(400) rotateX(-60);
+  #question: hide;
+  #divide: show;
+}
+#business: rotate(80);
+#business,#designer { transform-origin: 50% 100%; }
+.s15 {
+  #business: show rotate(-80);
+}
+#designer: rotate(80) scale(0.7,0.7) up(180);
+.s16 {
+  #business: scale(0.4,0.4) left(20) up(150);
+  #designer: show rotate(-88);
+}
+#developer: rotate(-80);
+#developer { transform-origin: 50% 0%; }
+
+.s17 {
+  #designer: scale(-0.43,-0.43) right(300) up(130);
+  #developer: show rotate(+80);
+}
+.s18 {
+  #developer: scale(0.5,0.5) up(100) right(150);
+}
+#model,#view,#viewmodel {
+  color: white;
+  background-color: rgba(100,100,100,0.7);
+  padding: 50px;
+  border-radius: 30px;
+  font-size: 40px;
+  text-shadow: 0 0 20px yellow;
+}
+
+#model: move(150,-100);
+#view: move(150,-100);
+#viewmodel: move(150,-100);
+
+.s19 {
+  #model: show left(150) down(150);
+  #view: show right(150) down(150) delay(0.2);
+  #viewmodel: show up(100) delay(0.4);
+}
+#viewmodel_d,#model_d,#view_d { color: yellow; font-size: 32px; width:500px;}
+#viewmodel_d: move(20,-250);
+#view_d: move(20,-90);
+#model_d: move(20,50);
+.s20 {
+  #divide: hide scale(1.2,1.2);
+  #designer: hide;
+  #developer: hide;
+  #business: hide;
+  #viewmodel,#view,#model { padding-right: 600px; box-shadow: 2px 2px 20px #222; background-color: #555;}
+  #viewmodel { padding-right: 600px; }
+  #viewmodel: left(400) up(50) delay(0.2);
+  #viewmodel_d: show right(100) delay(0.4);
+  #view { padding-right: 710px;}
+  #view: left(605) up(140) delay(0.6);
+  #view_d: show right(100) delay(0.8);
+  #model { padding-right: 680px;}
+  #model: left(290) delay(1) down(20);
+  #model_d: show right(100) delay(1.2) down(20);
+}
+#twinfield_ui { @include image;}
+#twinfield_ui: scale(0.7,0.7) move(0,300);
+#y2013 { font-size: 40px; color:black;}
+#y2013: move(400,-350);
+.s21 {
+  #viewmodel: hide up(300) delay(0);
+  #viewmodel_d: hide up(300) delay(0);
+  #view: hide up(600) delay(0.2);
+  #view_d: hide up(600) delay(0.2);
+  #model: hide up(800) delay(0.4);
+  #model_d: hide up(800) delay(0.4);
+  #twinfield_ui: show up(300) delay(0.4);
+  #y2013: show down(100) delay(1);
+  #y2013 { color:white; }
+}
+#exclamation: rotate(-100) down(100);
+.s22 {
+  #y2013: hide;
+  #twinfield_ui: rotate(100) delay(0)  hide;
+  #exclamation: rotate(100) show delay(0.4);
+}
+#problem1: move(500);
+#problem1,#problem2,#problem3 { color:white; font-size: 40px; width:600px;text-align: justify; background-color: rgba(50,50,50,0.8);padding:50px; }
+#problem1 b,#problem2 b,#problem3 b { color:yellow;}
+.s23 {
+  #exclamation: left(100) delay(0);
+  #exclamation { opacity: 0.4;};
+  #problem1: show left(500);
+}
+#problem2: move(500);
+.s24 {
+  #exclamation: left(100);
+  #problem1: hide left(500);
+  #problem2: show left(500);
+}
+#problem3: move(500);
+.s25 {
+  #exclamation: left(100);
+  #problem2: hide left(500);
+  #problem3: show left(500);
+}
+#problem3a,#problem3b { font-size: 32px;color:white;width:500px; text-align: justify;}
+#problem3a: up(10) right(50);
+#problem3b: down(10) right(50);
+.s26 {
+  #problem3: up(100);
+  #problem3 { padding-bottom: 200px; }
+  #problem3a: show down(40);
+}
+.s27 {
+  #problem3: up(100);
+  #problem3 { padding-bottom: 300px; }
+  #problem3a: up(100);
+  #problem3b: show down(40);
+  #twinfield { z-index: 10;}
+  #twinfield: move(100,300);
+}
+#road { @include image;}
+#road: move(0,200);
+#next { text-shadow: 0 0 20px white;}
+.s28 {
+  #problem3: rotate(90) hide;
+  #problem3a: rotate(90) hide;
+  #problem3b: rotate(90) hide;
+  #exclamation: hide;
+  #road: show up(200);
+  #twinfield: show up(600) delay(0.4);
+  #logo: show up(300) left(40) delay(0.4);
+  #next: show up(100) delay(1);
+}
+#next1,#next2,#next3 {
+  font-size:80px; width: 900px; text-align: center; border: solid 1px #aaa;background-color: white;
+  box-shadow: 2px 2px 10px #888;padding:10px;
+}
+#next1 b,#next2 b,#next3 b { color:green}
+#next1: down(400);
+#next2: down(400);
+#next3: down(400);
+.s29 {
+  #twinfield: up(20) delay(0);
+  #logo: up(30) delay(0);
+  #road: hide up(400);
+  #next: up(130) delay(0);
+  #next { color: #aaa;};
+  #next1: show up(400);
+}
+.s30 {
+  #twinfield: up(30);
+  #logo: up(30);
+  #next: up(40);
+  #next1: up(170);
+  #next2: show up(400);
+}
+.s31 {
+  #twinfield: up(20);
+  #logo: up(20);
+  #next: up(30);
+  #next1: up(50);
+  #next2: up(50);
+  #next3: show up(240);
+}
+#structure { @include image; }
+#structure: move(0,500);
+#howt: move(-130,700);
+#howt { font-size: 60px;text-shadow: 0 0 20px #999;}
+.s32 {
+  #next: up(230) hide;
+  #next1: up(250) hide delay(0.2);
+  #next2: up(550) hide delay(0.4);
+  #next3: up(840)  hide delay(0.6);
+  #structure: show up(500) delay(0.8);
+  #howt: show up(500) delay(1);
+}
+#form_simple: move(0,300);
+.s33 {
+  #structure: hide up(500) delay(0);
+  #howt: hide up(500) delay(0);
+  #form_simple: show up(300);
+  #logo: hide;
+}
+#form_simple_j: rotateX(90);
+.s34 {
+  #form_simple: hide rotateX(90);
+  #form_simple_j: show rotateX(-90);
+}
+#form_simple_v: rotateX(-90);
+.s35 {
+  #form_simple_j: hide rotateX(-90);
+  #form_simple_v: show rotateX(90);
+}
+#form_collections: rotateX(90);
+#form_collections pre { font-size: 18px;}
+.s36 {
+  #form_simple_v: hide rotateX(90);
+  #form_collections: show rotateX(-90);
+}
+#form_valid: rotateX(-90);
+.s37 {
+  #form_collections: hide rotateX(-90);
+  #form_valid: show rotateX(90);
+}
+#end: rotate(0,0,800) scale(0.1,0.1);
+.s38 {
+  #form_valid:hide;
+  #twinfield: down(100);
+  #end: rotate(0,0,-800) show scale(0.5,0.5);
+}
+sample { display:none}

@@ -1,0 +1,18 @@
+{
+  "controller":"nfCustomerFormController",
+  "sections":[
+    {
+      "caption":"Customer",
+      "controls":[
+        {
+          "templateType": "input",
+          "fieldType": "text",
+          "bind": "name",
+          "context": "Customer",
+          "showIf": true,
+          "placeholder": "Customer name"
+        }
+      ]
+    }
+  ]
+}
