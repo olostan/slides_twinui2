@@ -1,0 +1,10 @@
+.customer-block {
+            padding-top: 154px;
+    min-height: 150px;width: 410px;word-wrap: break-word;
+line-height: 1.3;
+}
+.company-info-block {
+    min-height: 315px; width: 215px;
+                        word-wrap: break-word;
+    margin-right: -2px;
+}

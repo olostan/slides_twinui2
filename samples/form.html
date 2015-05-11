@@ -1,0 +1,16 @@
+<twf:activity controller="nfCustomerFormController">
+
+    <nf:form-model nf-form-context="Customer">
+        <nf:form-section caption="Contact Details">
+            <nf:form-text label="Name"
+                          placeholder="Customer name"
+                          bind="name">
+            </nf:form-text>
+
+            <nf:form-static-text label="Customer Number"
+                                 show-if="Customer._links.self">
+            </nf:form-static-text>
+        </nf:form-section>
+    </nf:form-model>
+
+</twf:activity>

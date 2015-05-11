@@ -1,0 +1,27 @@
+<nf:validation-rules>
+    <nf:rule context="name">
+        <nf:require>
+            Customer shoud have a name
+        </nf:require>
+    </nf:rule>
+
+    <nf:rule for-each-of="address in addresses">
+        <nf:rule title="Address in addresses">
+            <nf:require field="subsectionName">
+                No section title!
+            </nf:require>
+
+            <nf:require field="addressLine1">
+                Address should have first line
+            </nf:require>
+        </nf:rule>
+    </nf:rule>
+
+    <nf:rule for-each-of="bank in banks">
+        <nf:rule context="addressLine1">
+            <nf:require>
+                No bank address line 1!
+            </nf:require>
+        </nf:rule>
+    </nf:rule>
+</nf:validation-rules>

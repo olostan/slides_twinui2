@@ -1,0 +1,31 @@
+<twf:activity controller="nfCustomerFormController">
+
+    <nf:form-model nf-form-context="Customer">
+
+        <nf:form-section caption="Addresses">
+            <nf:form-collection collection-title="@Addresses.AddressSubsection"
+                                nf-form-context="addresses"
+                                controller="addressController">
+
+                <nf:form-select label="@Addresses.AddressType"
+                                placeholder="@Addresses.AddressType"
+                                bind="addressType"
+                                source="addressTypes">
+                </nf:form-select>
+
+                <nf:form-text label="@Addresses.AddressLine1"
+                              placeholder="@Addresses.AddressLine1"
+                              bind="addressLine1"
+                              max-length="80">
+                </nf:form-text>
+
+                <nf:form-text label="@Addresses.AddressLine2"
+                              placeholder="@Addresses.AddressLine2"
+                              bind="addressLine2"
+                              max-length="80">
+                </nf:form-text>
+
+            </nf:form-collection>
+        </nf:form-section>
+    </nf:form-model>
+</twf:activity>
