@@ -43,10 +43,10 @@ comment {
   color: #888;font-size: 32px;
 }
 #mytitle: move(-45,120);
-#url,#url2 { font-size: 32px;}
-#url a, #url2 a { color: #AAD;}
-#url: move(-220,155);
-#url2: move(140,155);
+#url,#url2 { font-size: 28px;}
+#url a, #url2 a { color: #BBE;}
+#url: move(-50,155);
+#url2: move(-52,185);
 
 .s1 {
   #logo: show;
@@ -63,7 +63,7 @@ comment {
   #name: down(100);
   #mytitle: down(100) delay(0.1);
   #url: down(100) delay(0.2);
-  #url2: down(100) delay(0.2);
+  #url2: down(100) delay(0.3);
   
 }
 #twinfield {  color: #3090FF; }
@@ -79,7 +79,7 @@ comment {
   #name: down(100) hide;
   #mytitle: down(100) delay(0.1) hide;
   #url: down(100) delay(0.2) hide;
-  #url2: down(100) delay(0.2) hide;
+  #url2: down(100) delay(0.3) hide;
   
 }
 
