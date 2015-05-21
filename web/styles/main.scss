@@ -67,14 +67,17 @@ comment {
   
 }
 #twinfield {  color: #3090FF; }
+#wk {  color: #999; font-size: 38px;}
+#wk: right(300) down(70);
 #twinfield: move(320,0);
-#title {  font-size:26px;transition-delay: 1s; }
-#title: move(550,100);
+#title {  font-size:32px;transition-delay: 1s; }
+#title: move(450,140);
 
 .s3 {
   #logo: scale(0.5,0.5) move(-200,0);
   #twinfield: show move(120,0);
-  #title:show move(50,100);
+  #wk: show left(100);
+  #title:show left(400);
   
   #name: down(100) hide;
   #mytitle: down(100) delay(0.1) hide;
@@ -90,6 +93,7 @@ comment {
   #how: show move(0,0);
   #logo: move(-200) hide;
   #twinfield: move(500) hide;
+  #wk: right(600) hide;
 }
 #m1,#v1,#v2,#m2 { font-size:140px;}
 #m1: move(-340);
