@@ -67,14 +67,17 @@ comment {
   
 }
 #twinfield {  color: #3090FF; }
+#wk {  color: #999; font-size: 38px;}
+#wk{ transform:translateX(300px) translateY(70px);}
 #twinfield{ transform:translateX(320px) translateY(0px);}
-#title {  font-size:26px;transition-delay: 1s; }
-#title{ transform:translateX(550px) translateY(100px);}
+#title {  font-size:32px;transition-delay: 1s; }
+#title{ transform:translateX(450px) translateY(140px);}
 
 .s3 {
   #logo{ transform:translateX(-200px) translateY(0px) scaleX(0.5) scaleY(0.5);}
   #twinfield{ opacity:1;transform:translateX(120px) translateY(0px);}
-  #title{ opacity:1;transform:translateX(50px) translateY(100px);}
+  #wk{ opacity:1;transform:translateX(200px) translateY(70px);}
+  #title{ opacity:1;transform:translateX(50px) translateY(140px);}
   
   #name{ opacity:0;transform:translateX(-50px) translateY(270px);}
   #mytitle{ opacity:0;transform:translateX(-45px) translateY(320px);}
@@ -90,6 +93,7 @@ comment {
   #how{ opacity:1;transform:translateX(0px) translateY(0px);}
   #logo{ opacity:0;}
   #twinfield{ opacity:0;transform:translateX(500px) translateY(0px);}
+  #wk{ opacity:0;transform:translateX(800px) translateY(70px);}
 }
 #m1,#v1,#v2,#m2 { font-size:140px;}
 #m1{ transform:translateX(-340px);}
